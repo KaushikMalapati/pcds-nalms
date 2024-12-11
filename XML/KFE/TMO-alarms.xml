@@ -463,25 +463,12 @@
             <delay/>
          </pv>
       </component>
-      <component name="SP1K4">
-         <pv name="SP1K4:PPM:CAM:TSS:SyncStatus">
-            <description>Camera Sync Status</description>
-            <latching/>
-            <delay/>
-            <filter>SP1K4:PPM:CAM:TriggerMode_RBV!=0</filter>
-         </pv>
-         <pv name="SP1K4:PPM:CAM:TSS:DiffVsIntAvg">
-            <description>Sync Diff</description>
-            <latching/>
-            <delay/>
-         </pv>
-      </component>
       <component name="IM5K4">
          <pv name="IM5K4:PPM:CAM:TSS:SyncStatus">
-            <description>Camera Sync Status</description>
+            <description>Reversed Polarity Accidentally</description>
             <latching/>
             <delay/>
-            <filter>IM5K4:PPM:CAM:TriggerMode_RBV!=0</filter>
+            <filter>IM5K4:PPM:CAM:TriggerMode_RBV==0</filter>
          </pv>
          <pv name="IM5K4:PPM:CAM:TSS:DiffVsIntAvg">
             <description>Sync Diff</description>
@@ -504,7 +491,7 @@
       </component>
    </component>
    <component name="TMO LASER">
-      <component name="QADC">
+      <component name="UADC">
          <pv name="LM1K4:QADC:01:OUT0_EDGE1">
             <description>QADC signal monitor</description>
             <latching/>
@@ -516,6 +503,16 @@
             <latching/>
             <delay/>
             <filter>LM1K4:QADC:01:OUT0_EDGE2&gt;0</filter>
+         </pv>
+      </component>
+   </component>
+   <component name="DAFF">
+      <component name="New Row">
+         <pv name="LM1K4:QADC:01:OUT0_EDGE1">
+            <description>QADC signal monitor</description>
+            <latching/>
+            <delay/>
+            <filter>LM1K4:QADC:01:OUT0_EDGE1&gt;0</filter>
          </pv>
       </component>
    </component>
