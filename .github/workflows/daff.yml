@@ -36,7 +36,7 @@ jobs:
       run: |
         daff git csv
         git diff origin/master..HEAD > ${{ runner.temp }}/diff.txt
-        git diff origin/master..HEAD }}/merge
+        git diff origin/master..HEAD
         cat ${{ runner.temp }}/diff.txt
     - name: make comment
       uses: thollander/actions-comment-pull-request@v3
