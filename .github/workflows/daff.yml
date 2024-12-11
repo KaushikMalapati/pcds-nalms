@@ -29,8 +29,8 @@ jobs:
     - name: make diff
       run: |
         daff git csv
-        git diff origin/master..${{ github.event.pull_request.base.ref }} > ${{ runner.temp }}/diff.txt
-        git diff origin/master..${{ github.event.pull_request.base.ref }}
+        git diff origin/master..${{ github.event.pull_request.head.ref }} > ${{ runner.temp }}/diff.txt
+        git diff origin/master..${{ github.event.pull_request.head.ref }}
         cat ${{ runner.temp }}/diff.txt
     - name: make comment
       uses: thollander/actions-comment-pull-request@v3
