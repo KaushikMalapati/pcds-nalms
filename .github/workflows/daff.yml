@@ -22,6 +22,7 @@ jobs:
     - uses: actions/checkout@v3
       with:
         fetch-depth: 0
+        ref: ${{ github.head_ref }}
     - name: install requirements
       run: |
         pip install --upgrade pip
@@ -34,8 +35,8 @@ jobs:
     - name: make diff
       run: |
         daff git csv
-        git diff ${{ github.ref }}..refs/pull/${{ github.event.pull_request.number }}/merge > ${{ runner.temp }}/diff.txt
-        git diff ${{ github.ref }}..refs/pull/${{ github.event.pull_request.number }}/merge
+        git diff origin/master..HEAD > ${{ runner.temp }}/diff.txt
+        git diff origin/master..HEAD }}/merge
         cat ${{ runner.temp }}/diff.txt
     - name: make comment
       uses: thollander/actions-comment-pull-request@v3
