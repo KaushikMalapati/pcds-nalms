@@ -35,7 +35,7 @@ jobs:
     - name: make diff
       run: |
         daff git csv
-        git config set --global diff.daff-csv.command daff diff --git --output-format html --fragment
+        git config set --global diff.daff-csv.command "daff diff --git --output-format html --fragment"
         git remote add target git@github.com:pcdshub/pcds-nalms.git
         git diff target/${{ github.event.pull_request.base.ref }}...HEAD > ${{ runner.temp }}/diff.txt
         cat ${{ runner.temp }}/diff.txt
