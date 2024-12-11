@@ -30,6 +30,9 @@ jobs:
       run: |
         daff git csv
         git diff origin/master..HEAD > ${{ runner.temp }}/diff.txt
+        git show > ${{ runner.temp }}/diff.txt
+        echo "Hello, World!" > ${{ runner.temp }}/diff.txt
+        cat ${{ runner.temp }}/diff.txt
     - name: make comment
       uses: thollander/actions-comment-pull-request@v3
       with:
