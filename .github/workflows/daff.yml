@@ -38,7 +38,7 @@ jobs:
         git config set --global diff.daff-csv.command "daff diff --git --output-format html --fragment"
         git remote add target https://github.com/pcdshub/pcds-nalms.git
         git fetch target
-        git diff target/${{ github.event.pull_request.base.ref }}...HEAD > ${{ runner.temp }}/diff.txt
+        git diff target/${{ github.event.pull_request.base.ref }}...HEAD Spreadsheet/ > ${{ runner.temp }}/diff.txt
         cat ${{ runner.temp }}/diff.txt
     - name: make comment
       uses: thollander/actions-comment-pull-request@v3
