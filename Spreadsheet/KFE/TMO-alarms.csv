@@ -3,7 +3,7 @@
 1,Mirrors,,,,,,
 2,MR1K4,,,,,,
 ,,MR1K4:SOMS:FWM:1_RBV,Flow sensor 1,,,,
-,,MR1K4:SOMS:FWM:2_RBV,Flow sensor 2,,,,
+,,MR1K4:SOMS:FWM:3_RBV,Flow sensor 2,,,,
 ,,MR1K4:SOMS:PRSM:1_RBV,Cool pressure,,,,
 ,,MR1K4:SOMS:PIP:01:PRESS_RBV,MR1K4 ion pump,,,,
 ,,MR1K4:SOMS:GCC:1:PRESS_RBV,GCC,,,,
