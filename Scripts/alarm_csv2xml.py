@@ -32,7 +32,10 @@ def csvtoxml(infile, outfile, cname):
                 desc = ET.SubElement(pv, 'description')
                 desc.text = row['Description']
                 latch = ET.SubElement(pv, 'latching')
-                latch.text = row['Latch'].capitalize()
+                if row['Latch']:
+                    latch.text = row['Latch'].capitalize()
+                else:
+                    latch.text = 'True'
                 delay = ET.SubElement(pv, 'delay')
                 delay.text = row['Delay']
                 if 'Filter' in row and row['Filter']:
