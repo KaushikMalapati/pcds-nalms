@@ -4,7 +4,7 @@
 2,Racks,,,,,,
 ,,MEC:FMS:R64A:HMD,Rack Humidity,,,,
 ,,MEC:FMS:R64B:HMD:SVAL_RBV,Rack Humidity,,,,
-,,MEC:FMS:R60:HMD,Rack Humidity,,,,
+,,MEC:FMS:R60:HMD,Rack Humidity,TRUE,,,
 ,,MEC:FMS:R61:HMD,Rack Humidity,,,,
 ,,MEC:FMS:R62:HMD,Rack Humidity,,,,
 ,,MEC:FMS:R64A:TEMP:SVAL_RBV,Rack Temperature,,,,
