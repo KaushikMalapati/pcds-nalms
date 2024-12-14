@@ -31,6 +31,8 @@ jobs:
 
     - name: make diff
       run: |
+        git branch
+        git remote -v
         daff git csv
         git config set --global diff.daff-csv.command "daff diff --git --output-format html --fragment --context 0"
         git remote add target https://github.com/pcdshub/pcds-nalms.git
